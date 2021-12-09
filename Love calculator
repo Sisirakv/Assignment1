@@ -1,0 +1,47 @@
+check = 'true'
+love = 'love'
+n1=input('Name1:')
+n2=input('Name2:')
+c_1,c_2=0,0
+d1,d2=0,0
+l_1,l_2=0,0
+
+for i in check:
+  for j in n1 :
+    if i==j:
+      c_1=c_1+1  
+  for k in n2 :
+      if i==k:
+        c_2=c_2+1
+        
+for i1 in love:
+  for j1 in n1 :
+    if i1==j1:
+      l_1=l_1+1
+  for k1 in n2 :
+    if i1==k1:
+      l_2=l_2+1
+        
+
+a=str((l_1+l_2))
+b=str(c_1+c_2)
+leg1=len(a)
+leg2=len(b)
+
+for f1 in range(leg1):
+  w1=a[f1-1]
+  d1=d1+int(w1)
+
+for f2 in range(leg2):
+  w2=b[f2-1] 
+  d2=d2+int(w2)
+
+total=str(d2)+str(d1)
+total=int(total)
+
+if total <10 or total >90:
+  print('your score is',total,'%',',you go together like coke and mentos')
+elif total >40 and total <50:
+  print('youe score is',total,'%',',you are alright together')
+else:
+  print('your score is',total,'%')    
