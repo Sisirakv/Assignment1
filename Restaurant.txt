@@ -1,0 +1,154 @@
+#restaurant
+veg = {
+    'Sadhya' : {
+        'price' : 120,
+        'Details' : 'It includes ......'
+    },
+    'Puttu & Kadala Curry' : {
+        'price' : 135,
+        'Details' : 'it is .....'
+    },
+    'Malabari Parotta' : {
+        'price' : 80,
+        'Details' : 'it is....'
+    },
+    'Ghee Rice' : {
+        'price' : 60,
+        'Details' :' it is... '
+    },
+    'Vegetable Stew' : {
+        'price' : 40,
+        'Deatils' : 'it is...'
+    }
+}
+Non_Veg = {
+    'Biriyani' : {
+        'price' : 120,
+        'details':'It is an...'
+    },
+    'Appam and Chicken Stew' : {
+        'price' : 160,
+        'details':'It is...'
+    },
+    'Beef Chikki Fry': {
+        'price':80,
+        'details':'It is...'
+    },
+    'Karimeen Pollichathu' : {
+        'price' : 50,
+        'details' : 'It is...'
+    }
+}
+total_amount=0
+amount = 0 
+all_items=[]
+item_name = 'ITEMS:'
+print('WHICH CATEGORY OF FOOD YOU WANT:\n\n  1.veg\n  2.Non veg')
+type_of_fd = int(input('\nPLEASE CHOOSE ANY OF THE OPTION : '))
+if type_of_fd == 1:
+    print('\nOK SIR/MADAM, THANKS FOR YOUR RESPONS\n\nBELOW SHOWN ARE OUR DELICIOUS VEG ITEMS\n\nPLEASE CHOOSE YOUR FAVOURITE:  ')
+    for item_details in veg.items(): 
+      total_amount = total_amount+amount
+      all_items.append(item_name)
+      print('\nDO YOU WANT TO SEE OUR FODD LIST/ANYTHING ELSE\n 1.IF YES\n 2.OTHERWISE')  
+      food_need =  int(input('\nPRESS:')) 
+
+      if food_need ==1:
+          print('\n  1.Sadhya\n  2.Puttu & Kadala Curry\n  3.Malabari Parotta\n  4.Ghee Rice\n  5.Vegetable Stew\n  0.Enough')
+          dish = int(input('\nYOUR CHOICE:'))
+
+          if dish == 1:
+            print('\nSadhya\n\n',veg['Sadhya'])
+            amount =veg['Sadhya']['price']
+            print ('price for :',amount)
+            qty=int(input(''))
+            t_price = amount * qty
+            item_name = 'Sadhya'
+            continue
+
+          elif dish == 2:
+            print('\nPuttu & Kadala Curry\n\n',veg['Puttu & Kadala Curry'])
+            amount =veg['Puttu & Kadala Curry']['price']
+            print (amount)
+            qty=int(input(''))
+            t_price = amount * qty
+            item_name = 'Puttu & Kadala Curry'
+            continue
+
+          elif dish == 3:
+            print('\nMalabari Parotta\n\n',veg['Malabari Parotta'])
+            amount =veg['Malabari Parotta']['price']
+            print (amount)
+            qty=int(input(''))
+            t_price = amount * qty
+            item_name = 'Malabari Parotta'
+            continue
+            
+          elif dish ==4:
+            print('\nGhee Rice\n\n',veg['Ghee Rice'])
+            amount =veg['Ghee Rice']['price']
+            print (amount)
+            qty=int(input(''))
+            t_price = amount * qty
+            item_name = 'Ghee Rice'
+            continue
+            
+          elif dish == 5:
+            print('\nVegetable Stew\n\n',veg['Vegetable Stew'])
+            amount =veg['Vegetable Stew']['price']
+            print (amount)
+            qty=int(input(''))
+            t_price = amount * qty
+            item_name = 'Vegetable Stew'
+            continue 
+            
+          elif dish == 0:      
+            print('\nTHANKS FOR YOUR PURCHASE\n ')
+            break
+      elif food_need == 2:
+        break      
+    print('\nTHIS IS YOUR TOTAL AMOUNT :',total_amount) 
+    print('ALL ITEMS IN YOUR LIST:',all_items)
+elif type_of_fd == 2:
+    print('\nOK SIR/MADAM, THANKS FOR YOUR RESPONS\n\nBELOW SHOWN ARE OUR DELICIOUS VEG ITEMS\n\nPLEASE CHOOSE YOUR FAVOURITE:  ')
+    for item_details in Non_Veg.items(): 
+      total_amount = total_amount+amount
+      all_items.append(item_name)
+      print('\nDO YOU WANT TO SEE OUR FODD LIST/ANYTHING ELSE\n 1.IF YES\n 2.OTHERWISE')  
+      food_need =  int(input('\nPRESS:')) 
+
+      if food_need ==1:
+          print('\n  1.Biriyani\n  2.Appam and Chicken Stew\n  3.Beef Chikki Fry\n  4.Karimeen Pollichathu\n  0.Enough')
+          dish = int(input('\nYOUR CHOICE:'))
+
+          if dish == 1:
+            print('\nBiriyani\n\n',Non_Veg['Biriyani'])
+            amount =Non_Veg['Biriyani']['price']
+            item_name = 'Biriyani'
+            continue
+
+          elif dish == 2:
+            print('\nAppam and Chicken Stew\n\n',Non_Veg['Appam and Chicken Stew'])
+            amount =Non_Veg['Appam and Chicken Stew']['price']
+            item_name = 'Appam and Chicken Stew'
+            continue
+
+          elif dish == 3:
+            print('\nBeef Chikki Fry\n\n',Non_Veg['Beef Chikki Fry'])
+            amount =Non_Veg['Beef Chikki Fry']['price']
+            item_name = 'Beef Chikki Fry'
+            continue
+            
+          elif dish ==4:
+            print('\nKarimeen Pollichathu\n\n',Non_Veg['Karimeen Pollichathu'])
+            amount =Non_Veg['Karimeen Pollichathu']['price']
+            item_name = 'Karimeen Pollichathu'
+            continue
+            
+          elif dish == 0:      
+            print('\nTHANKS FOR YOUR PURCHASE\n ')
+            break
+      elif food_need == 2:
+        break      
+    print('\nTHIS IS YOUR TOTAL AMOUNT :',total_amount) 
+    print('ALL ITEMS IN YOUR LIST:',all_items)    
