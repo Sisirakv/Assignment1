@@ -1,0 +1,12 @@
+word = "welcome to the world of python"
+spli = word.split(" ")
+even = []
+odd = []
+leng = len(split)
+for i in range(0,leng):
+  if i%2:
+    even.append(spli[i])
+  else:
+    odd.append(spli[i])
+print(even)
+print(odd)
