@@ -1,0 +1,40 @@
+# Common elemnets in Arrays
+
+def commonElemets(A,B,C,n1,n2,n3):
+  i=j=k=0
+  print("Common Elements are: ")
+  while(i < n1 and j < n2 and k< n3):
+    if (A[i] == B[j] and B[j] == C[k]):
+        print (A[i])
+        i = i+1
+        j = j+1
+        k = k+1
+    elif A[i] < B[j]:
+            i = i+1 
+    elif B[j] < C[k]:
+            j = j+1
+    else:
+            k = k+1
+A=[]
+B=[]
+C=[]
+n1=int(input('Number of elements in Array 1 :'))
+for i in range (n1):
+  s = int(input())
+  A.append (s)
+
+n2=int(input('Number of elements in Array 2 :'))  
+for j in range (n2):
+  t = int(input())
+  B.append (t)  
+
+n3=int(input('Number of elements in Array 3 :'))  
+for k in range (n3):
+  r = int(input())
+  C.append (r)
+
+A = sorted(A)
+B = sorted(B)
+C = sorted(C)   
+  
+commonElemets(A,B,C,n1,n2,n3) 
