@@ -1,0 +1,67 @@
+#Calculator
+#for and if
+
+for i in range(4):
+    a = int ( input ('a:') )
+    b = int ( input ('b:') )
+    i=int ( input ('choose :') )
+    if 0 == i:
+      print (a+b)
+    elif 1 == i:
+      print (a-b)
+    elif 2 == i :
+      print (a*b)
+    elif 3 == i :
+      print (a/b)
+
+
+#Function
+
+def Sum_1(a,b):
+  Sum = a+b
+  return Sum
+def Sub_1(a,b):  
+  sub = a-b
+  return sub
+def Div_1(a,b):  
+  div = a/b
+  return div
+def Mul_1(a,b):  
+  mul = a*b
+  return mul
+a = int(input('enter a number:'))
+b = int(input('enter a number:')) 
+print('\n1.Addition:\n2.Subtraction:\n3.Division:\n4.Multiplication:\n') 
+i = int(input('choise:'))
+if 1 == i:
+  print(Sum_1(a,b))
+elif 2== i:
+  print(Sub_1(a,b))
+elif 3==i:
+  print(Div_1(a,b))
+elif 4==i:
+  print(Mul_1(a,b))      
+
+
+
+#Class
+
+class Calcu:
+  def __init__(self,a,b):
+     self.Sum = a+b
+     self.Sub = a-b
+     self.Mul = a*b
+     self.Div = a/b
+a = int(input('FIRST NUMBER:'))
+b = int(input('SECOND NUMBER:')) 
+print('1.SUMMATION\n2.SUBTRACTION\n3.MULTIPLICATION\n4.DIVISION')
+choice = int(input('CHOOSE YOUR CHOICE:'))    
+Value = Calcu(a,b)
+if choice == 1:
+  print(Value.Sum) 
+elif choice ==2:   
+  print(Value.Sub)
+elif choice == 3:
+  print(Value.Mul)  
+elif choice == 4:
+  print(Value.Div)   

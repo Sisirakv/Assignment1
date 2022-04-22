@@ -1,0 +1,10 @@
+#Count Vowels
+
+x="This is a python language"
+y=["a","e","i","o","u"]
+count=0
+for i in x:
+  for j in y:
+    if i==j:
+      count=count+1
+print(count)  

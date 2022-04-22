@@ -1,0 +1,21 @@
+#seperate Even and odd
+num = [1,5,10,21,22,58]
+sum_even=0
+sum_odd=0
+Even=[]
+Odd=[]
+for new_num in range(4):
+  new_num = int(input('enter a new number:'))
+  num.append(new_num)
+  print(num)
+for i in num:
+   if 0 == i%2:
+      Even.append(i)
+      sum_even=sum_even+i
+   else:
+      Odd.append(i)
+      sum_odd=sum_odd+i
+print('EVEN NUMBER:',Even)  
+print('ODD NUMBERS',Odd)     
+print('sum of even numbers:',sum_even)
+print('sum of odd numbers:',sum_odd)  
